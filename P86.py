@@ -1,4 +1,4 @@
-#Preemptive Priority Scheduling (CPU scheduling simulator — lower number = higher priority)
+#Preemptive Priority Scheduling 
 import heapq
 def simulate(ps):
     for p in ps: p['rem']=p['burst'];p['start']=-1
@@ -13,4 +13,5 @@ def simulate(ps):
         else:cur['finish']=t
     for p in ps:print(p['pid'],p['finish']-p['arrival'],p['finish']-p['arrival']-p['burst'])
 simulate([{'pid':1,'arrival':0,'burst':7,'priority':2},{'pid':2,'arrival':2,'burst':4,'priority':1}])
+
 
