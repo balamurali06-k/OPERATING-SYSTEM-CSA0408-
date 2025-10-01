@@ -1,3 +1,4 @@
+#Memory Allocation (First/Best/Worst Fit)
 def fit(blocks,ps,mode):
     bl=blocks[:];res=[]
     for p in ps:
@@ -10,3 +11,4 @@ def fit(blocks,ps,mode):
     print(mode,res)
 blocks=[100,500,200,300,600];ps=[212,417,112,426]
 for m in["first","best","worst"]:fit(blocks,ps,m)
+
