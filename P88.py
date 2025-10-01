@@ -1,3 +1,4 @@
+#Round Robin
 from collections import deque
 def rr(ps,q):
     for p in ps:p['rem']=p['burst'];p['start']=-1
@@ -10,3 +11,4 @@ def rr(ps,q):
         else:cur['finish']=t
     for p in ps:print(p['pid'],p['finish']-p['arrival'],p['finish']-p['arrival']-p['burst'])
 rr([{'pid':1,'arrival':0,'burst':5},{'pid':2,'arrival':1,'burst':4}],2)
+
