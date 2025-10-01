@@ -1,3 +1,4 @@
+#Message Queue IPC
 from multiprocessing import Process,Queue;import time
 def prod(q):[q.put(f"msg{i}") or print("P",i) or time.sleep(.1) for i in range(5)];q.put("END")
 def cons(q): 
@@ -6,3 +7,4 @@ def cons(q):
 if __name__=="__main__":
     q=Queue();p=Process(target=prod,args=(q,));c=Process(target=cons,args=(q,))
     p.start();c.start();p.join();c.join()
+
